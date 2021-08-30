@@ -1,14 +1,11 @@
 import React, { Component } from "react";
-import { render } from 'react-dom';
-import { Circle, Image } from "react-konva";
+import { Image } from "react-konva";
 import planetOne from '../img/planetOne.png'; 
 import planetTwo from '../img/planetTwo.png';
 import planetThree from '../img/planetThree.png';
 import planetFour from '../img/planetFour.png';
 import planetFive from '../img/planetFive.png';
 import useImage from 'use-image';
-/* import FirstPlanet from '../img/planetOne.png'; */
-/* import './App.css'; */
 
 
  const PlanetOneImage = () => {
@@ -35,9 +32,6 @@ const PlanetFiveImage = () => {
   const [image] = useImage(planetFive);
   return <Image image={image} x={0} y={0}/>;
 };
-
-
-
 
 const Planet = () => {
   return (
