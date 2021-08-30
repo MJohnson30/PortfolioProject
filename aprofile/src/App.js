@@ -1,24 +1,19 @@
-
+import { Stage, Layer } from 'react-konva';
 import './App.css';
-import React, { Component } from 'react'
-import BigBangStarField from 'react-big-bang-star-field'
- 
-class Example extends Component {
-  render () {
-    return (
-      <BigBangStarField
-        numStars={666}
-        maxStarSpeed={1}
-        scale={4}
-        style={{
-            position: 'absolute',
-            width: '100%',
-            height: '100%'
-          }}
-        starColor={"217, 160, 244"}
-      />
-    )
-  }
+import Spaceship from './components/ship';
+import Space from './components/background';
+import Planet from './components/planets';
+export const App = () => {
+  return (
+    <div className = "container" > 
+      <Stage className="canvas" width={window.innerWidth} height={window.innerHeight}>
+        <Layer>
+          <Spaceship className="spaceship"/>
+          <Space />
+          <Planet /* x={700} y={150} */ />
+        </Layer>
+      </Stage>
+    </div>
+  );
 }
-
-export default Example;
+export default App;
